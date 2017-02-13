@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Demo</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script language="javascript" type="text/javascript" src="/static/annopdf.js"></script>
+    <!--<script language="javascript" type="text/javascript" src="/static/pdf.combined.js"></script>-->
+    <script>var socket = io();</script>
+    <style>
+  		html, body {
+  			width: 100%;
+  			height: 100%;
+  			margin: 0px;
+  			border: 0;
+  			overflow: hidden; /*  Disable scrollbars */
+  			display: block;  /* No floating content on sides */
+  		}
+      div{
+        width:100%;
+        height:100%;
+      }
+	</style>
+  </head>
+  <body>
+     <div id="canvascontainer"></div>
+  </body>
+</html>

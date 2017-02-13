@@ -1,0 +1,10 @@
+{
+  "name": "annopdf",
+  "version": "0.0.1",
+  "description": "annotate pdfs",
+  "dependencies": {
+    "express": "^4.10.2",
+    "pdfjs-dist": "^1.7.270",
+    "socket.io": "^1.7.2"
+  }
+}
