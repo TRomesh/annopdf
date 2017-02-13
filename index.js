@@ -2,8 +2,11 @@ var express = require("express");
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var aws = require('aws-sdk');
 
-var canvas_state=null;
+aws.config.update({
+ region:"us-east-2",
+});
 
 app.use('/static', express.static('assets'));
 
