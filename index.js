@@ -4,6 +4,8 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var aws = require('aws-sdk');
 
+var lines=[];
+
 aws.config.update({
  region:"us-east-2",
 });
@@ -20,7 +22,12 @@ io.on('connection', function(socket){
   console.log('a user connected');
 
   socket.on('updatelines',function(msg){
+    if(msg){lines=msg;}
     socket.broadcast.emit('updatelines',msg);
+  });
+
+  socket.on('readyforline',function(msg){
+    socket.emit('updatelines',lines);
   });
 
   socket.on('updatetransform',function(msg){

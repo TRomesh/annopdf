@@ -13,6 +13,8 @@ $(function(){
     var writeable=false;
     var writing=false;
     var lines=[];
+
+
     var mouse;
     img.onload = function(){
 
@@ -109,6 +111,7 @@ $(function(){
         lines=msg;
         redraw();
       });
+      socket.emit('readyforline');
       socket.on('updatetransform',function(msg){
         ctx.setTransform(msg.a,msg.b,msg.c,msg.d,msg.e,msg.f);
         redraw();

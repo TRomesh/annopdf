@@ -15,6 +15,7 @@
   			border: 0;
   			overflow: hidden; /*  Disable scrollbars */
   			display: block;  /* No floating content on sides */
+        background-color:LightGrey;
   		}
       div{
         width:100%;
@@ -24,5 +25,13 @@
   </head>
   <body>
      <div id="canvascontainer"></div>
+     <div id="legend" style="position: absolute; z-index: 1; right: 50px; top: 50px; width:140px; height:110px; padding:10px; background-color: Lavender; border:1px solid black;">
+       <b>Legend</b><br>
+       Click &amp; drag to move<br>
+       Mousewheel to zoom<br>
+       <b>z</b>: hold to draw lines<br>
+       <b>x</b>: clear all lines<br>
+       <b>c</b>: propogate focus
+     </div>
   </body>
 </html>
